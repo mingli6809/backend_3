@@ -5,7 +5,8 @@ dotenv.config();
 
 const connectDB = async (input) => {
   try {
-    const x = await mongoose.connect("mongodb://localhost:27017/test")
+   // const x = await mongoose.connect("mongodb://localhost:27017/test")
+   const x=await  mongoose.connect('mongodb+srv://greenvideo1:lm970131@cluster0.1ndekrv.mongodb.net/test');
     console.log("Connected to db");
     if (input.drop === true)
       mongoose.connection.db.dropDatabase();
